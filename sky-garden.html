@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sky Garden</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 2rem;
+      }
+      ul {
+        padding-left: 1.2rem;
+      }
+      li {
+        margin-bottom: 0.5rem;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Sky Garden</h1>
+    <ul id="garden-list"></ul>
+
+    <script src="sky-garden-data.js"></script>
+    <script>
+      const flowers = Array.isArray(window.SKY_GARDEN_FLOWERS)
+        ? window.SKY_GARDEN_FLOWERS
+        : [];
+      const list = document.getElementById("garden-list");
+
+      flowers.forEach((flower) => {
+        const item = document.createElement("li");
+        item.textContent = `${flower.name} (${flower.color}) - ${flower.sunlight}`;
+        list.appendChild(item);
+      });
+    </script>
+  </body>
+</html>
