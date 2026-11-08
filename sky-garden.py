@@ -1,7 +1,7 @@
 import sys, re, json, argparse, requests
 
-# python make_field.py 'NAME' [radius_deg] [--savename NAME] [--nstars N]
-# python make_field.py RA DEC radius_deg [--savename NAME] [--nstars N]
+# python sky-garden.py 'NAME' [radius_deg] [--savename NAME] [--nstars N]
+# python sky-garden.py RA DEC radius_deg [--savename NAME] [--nstars N]
 
 # writes NAME.json and NAME.csv, loadable with Upload
 
